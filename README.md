@@ -44,9 +44,8 @@ The dataset consists of 6,175 Persian names along with their associated gender a
 
 ### Dataset Distribution
 
-| **Distribution Type** | **Plot** |
-|-----------------------|----------|
 | ![image](https://github.com/user-attachments/assets/c1acbccc-d6e3-4811-b125-9bc57f460d73) | ![image](https://github.com/user-attachments/assets/ae12c721-58b9-45b2-a219-41b2627bb04b) |
+|-----------------------|----------|
 | ![image](https://github.com/user-attachments/assets/1a369046-e018-4812-89ca-9f8425d15b33) | ![image](https://github.com/user-attachments/assets/adcd16bc-7837-4b0e-9464-c5acf993ce25) |
 
 ### Data Challenges
@@ -74,17 +73,6 @@ We explored and developed several models:
    - **Binary and Multi-Class Classification:** FaBERT-based models were tested on both binary and multi-class classification tasks.
    - **Results:** FaBERT-based models outperformed Hazm-based models, particularly in predicting neutral names, due to FaBERT's superior ability to capture the linguistic nuances of Persian.
 
-### Model Details
-
-| **Model**          | **Result**                          |
-|-------------------------|-------------------------------------|
-| **Bi-LSTM (Binary)**    | ![image](https://github.com/user-attachments/assets/746a5985-de02-4419-b602-27850e712899) ![image](https://github.com/user-attachments/assets/55e17f7c-0593-48cd-bdf7-7041ec742d62) |
-| **Bi-LSTM (Multi-Class)** | ![image](https://github.com/user-attachments/assets/0014a365-4b86-4e35-b9ff-d382baab3f21) ![image](https://github.com/user-attachments/assets/bced0eb6-12c2-4bba-b09e-74dc08ce3c54) |
-| **Hazm-Based Models (Binary)** | ![image](https://github.com/user-attachments/assets/2fc03634-d6ce-40b9-a768-48df0b79485f) |
-| **Hazm-Based Models (Multi-Class)** | ![image](https://github.com/user-attachments/assets/a62448b2-bbe0-4664-be79-97bd1e1a3783) |
-| **FaBERT-Based Models (Binary)** | ![image](https://github.com/user-attachments/assets/6e00ca90-7bd0-4a0e-8001-fc62bb0420b7) |
-| **FaBERT-Based Models (Multi-Class)** | ![image](https://github.com/user-attachments/assets/2537ae75-903d-43cd-b24e-4fdd3fb1a37f) |
-
 ## Results
 
 ### Model Performance
@@ -102,6 +90,15 @@ We explored and developed several models:
 - **FaBERT-Based Models:**
   - **Strengths:** Demonstrated superior performance, particularly in handling neutral names, due to FaBERT's richer contextual embeddings that capture subtle nuances in the Persian language.
   - **Weaknesses:** Computationally more expensive compared to Hazm-based models, due to the higher dimensionality of the original embeddings. However, the accuracy gains justified this trade-off.
+
+| **Model**          | **Result**                          |
+|-------------------------|-------------------------------------|
+| **Bi-LSTM (Binary)**    | ![image](https://github.com/user-attachments/assets/746a5985-de02-4419-b602-27850e712899) ![image](https://github.com/user-attachments/assets/55e17f7c-0593-48cd-bdf7-7041ec742d62) |
+| **Bi-LSTM (Multi-Class)** | ![image](https://github.com/user-attachments/assets/0014a365-4b86-4e35-b9ff-d382baab3f21) ![image](https://github.com/user-attachments/assets/bced0eb6-12c2-4bba-b09e-74dc08ce3c54) |
+| **Hazm-Based Models (Binary)** | ![image](https://github.com/user-attachments/assets/2fc03634-d6ce-40b9-a768-48df0b79485f) |
+| **Hazm-Based Models (Multi-Class)** | ![image](https://github.com/user-attachments/assets/a62448b2-bbe0-4664-be79-97bd1e1a3783) |
+| **FaBERT-Based Models (Binary)** | ![image](https://github.com/user-attachments/assets/6e00ca90-7bd0-4a0e-8001-fc62bb0420b7) |
+| **FaBERT-Based Models (Multi-Class)** | ![image](https://github.com/user-attachments/assets/2537ae75-903d-43cd-b24e-4fdd3fb1a37f) |
 
 ### Critical Model Analysis
 Given that this model could be deployed publicly, methods such as Focal Loss and Weighted Loss were explored to handle the misclassification of neutral names, thereby increasing the model's reliability. Focal Loss in particular was effective in reducing the bias towards the majority classes (male and female), improving the model's ability to correctly identify neutral names.
