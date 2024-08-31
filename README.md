@@ -20,7 +20,7 @@ Gender prediction based on Persian names can be challenging due to the nuanced a
 
 ## Data Collection and Preprocessing
 
-The dataset consists of 6,175 Persian names along with their associated gender and usage frequency. Data preprocessing steps include:
+The dataset consists of 6,174 Persian names along with their associated gender and usage frequency. Data preprocessing steps include:
 
 - **Normalization:** Normalizing names while preserving key gender-specific characters to ensure that important distinctions in names are retained during model training.
 
@@ -105,7 +105,7 @@ Given that this model could be deployed publicly, methods such as Focal Loss and
 
 ## Future Work
 
-- **Regularization:** Implement additional regularization techniques, such as dropout and batch normalization, to further reduce overfitting, particularly in the FaBERT-based models.
+- **Regularization:** Experiment with additional regularization techniques, such as dropout and batch normalization, to further reduce overfitting, particularly in the FaBERT-based models.
 - **Threshold Tuning:** Fine-tune classification thresholds to improve the accuracy of neutral name predictions, particularly in edge cases where the model's confidence is low.
 - **Model Refinement:** Experiment with advanced architectures and hyperparameter tuning, such as exploring different layers and attention mechanisms in Bi-LSTM models, to push model performance even further.
 
